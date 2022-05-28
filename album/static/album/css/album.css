@@ -133,12 +133,12 @@ main .menu form button svg:hover {
   color: #ffcbcb5e;
 }
 
-main .menu .all {
+main .menu .all-photos {
   margin: 5% 0;
   cursor: pointer;
 }
 
-main .menu .all:hover {
+main .menu .all-photos:hover {
   color: #e24510;
 }
 
@@ -184,6 +184,15 @@ main .photos {
       flex-wrap: wrap;
   overflow: auto;
   padding: 2% 5%;
+  -webkit-animation: appear 0.5s ease-in-out;
+          animation: appear 0.5s ease-in-out;
+  display: none;
+}
+
+main .photos.active-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main .photos .image {

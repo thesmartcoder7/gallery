@@ -2,6 +2,40 @@ let openModels = document.querySelectorAll(".display-image");
 let closer = document.querySelectorAll(".close");
 let modal = document.querySelector(".modal");
 let copyUrls = document.querySelectorAll(".copy-url");
+let displayAll = document.querySelector(".all-photos");
+let locationSelection = document.querySelectorAll(".nav");
+let allSections = document.querySelectorAll(".photos");
+
+for (selector of locationSelection) {
+  selector.addEventListener("click", (e) => {
+    for (section of allSections) {
+      section.classList.remove("active-section");
+    }
+    for (selector of locationSelection) {
+      selector.classList.remove("active");
+    }
+    e.target.classList.add("active");
+    for (section of allSections) {
+      if (section.id == e.target.innerText) {
+        section.classList.add("active-section");
+      }
+    }
+  });
+}
+
+displayAll.addEventListener("click", (e) => {
+  for (section of allSections) {
+    section.classList.remove("active-section");
+  }
+  for (selector of locationSelection) {
+    selector.classList.remove("active");
+  }
+  for (section of allSections) {
+    if (section.id == e.target.className) {
+      section.classList.add("active-section");
+    }
+  }
+});
 
 for (image of openModels) {
   image.addEventListener("click", (e) => {
