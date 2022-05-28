@@ -18,16 +18,30 @@
       <div class="menu">
         <form action="">
           <select name="category" id="category">
+            <option value="category" selected>Select Category</option>
             <option value="random1">random1</option>
             <option value="random2">random2</option>
             <option value="random3">random3</option>
             <option value="random4">random4</option>
           </select>
-          <input type="submit" value="search" />
+          <button type="submit">
+            <svg aria-hidden="true" role="img" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="m16.325 14.899l5.38 5.38a1.008 1.008 0 0 1-1.427 1.426l-5.38-5.38a8 8 0 1 1 1.426-1.426ZM10 16a6 6 0 1 0 0-12a6 6 0 0 0 0 12Z"
+              />
+            </svg>
+          </button>
         </form>
         <p class="all">View All</p>
-
-        <p class="location">By Location</p>
+        <p class="location">Locations :</p>
+        <ul>
+          <li class="nav active">location 1</li>
+          <li class="nav">location 2</li>
+          <li class="nav">location 3</li>
+          <li class="nav">location 4</li>
+        </ul>
       </div>
       <div class="photos">
         <div class="image">
