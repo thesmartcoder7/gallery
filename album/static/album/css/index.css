@@ -130,7 +130,7 @@ main .right div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 1.5% 1.5% 3% 1.5%;
+  padding: 1.5% 1.5% 3.5% 1.5%;
   position: absolute;
 }
 
