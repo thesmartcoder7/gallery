@@ -129,6 +129,10 @@ main .menu form button svg {
   color: #dcdddd;
 }
 
+main .menu form button svg:hover {
+  color: #ffcbcb5e;
+}
+
 main .menu .all {
   margin: 5% 0;
   cursor: pointer;
@@ -194,18 +198,18 @@ main .photos .image {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: white;
+  background-color: #ffcbcb27;
   border-radius: 0.7vw;
   margin: 1.9% 1%;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 0.4%;
+  padding: 0.2%;
   position: relative;
 }
 
 main .photos .image .display-image {
   width: 100%;
-  height: 12.5vw;
+  height: 12.8vw;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0.6vw;
@@ -215,8 +219,8 @@ main .photos .image .display-image {
 }
 
 main .photos .image .display-image:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
@@ -261,7 +265,7 @@ main .photos .image .modal .closer-div p {
 }
 
 main .photos .image .modal .closer-div p:hover {
-  color: #e24510;
+  color: #ffcbcb5e;
 }
 
 main .photos .image .modal .full-image {
@@ -276,7 +280,7 @@ main .photos .image .modal .full-image {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-right: 0.07vw solid #ffcbcb27;
+  border-right: 0.07vw solid #ffcbcb5e;
 }
 
 main .photos .image .modal .full-image img {
