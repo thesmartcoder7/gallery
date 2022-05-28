@@ -44,8 +44,8 @@ main {
   height: 100%;
   width: 100%;
   background-color: transparent;
-  -webkit-backdrop-filter: blur(1.5vw);
-          backdrop-filter: blur(1.5vw);
+  -webkit-backdrop-filter: blur(1vw);
+          backdrop-filter: blur(1vw);
   border: 0.1vw solid #ffcbcb27;
   border-radius: 1vw;
   display: -webkit-box;
