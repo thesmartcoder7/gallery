@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @-webkit-keyframes emerge {
   0% {
     width: 0;

@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
 @mixin mobile {
   @media (max-width: 500px) {
     @content;

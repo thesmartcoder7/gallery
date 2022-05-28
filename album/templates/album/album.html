@@ -15,7 +15,134 @@
   </head>
   <body>
     <main>
-        
+      <div class="menu">
+        <form action="">
+          <select name="category" id="category">
+            <option value="random1">random1</option>
+            <option value="random2">random2</option>
+            <option value="random3">random3</option>
+            <option value="random4">random4</option>
+          </select>
+          <input type="submit" value="search" />
+        </form>
+        <p class="all">View All</p>
+
+        <p class="location">By Location</p>
+      </div>
+      <div class="photos">
+        <div class="image">
+          <img
+            class="display-image"
+            src="{% static 'album/images/landing/crazy.jpg'%}"
+            alt=""
+          />
+          <div class="modal">
+            <div class="closer-div">
+              <p class="close">Close</p>
+            </div>
+            <div class="full-image">
+              <img
+                src="{% static 'album/images/landing/crazy.jpg'%}"
+                alt=""
+                class="modal-image-full"
+              />
+            </div>
+            <div class="image-details">
+              <p>
+                lores: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iusto, rerum.
+              </p>
+              <p>
+                lores: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iusto, rerum.
+              </p>
+              <p>
+                lores: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iusto, rerum.
+              </p>
+              <p>
+                lores: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iusto, rerum.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="image">
+          <img
+            class="display-image"
+            src="{% static 'album/images/landing/green.jpg'%}"
+            alt=""
+          />
+          <div class="modal">
+            <div class="closer-div">
+              <p class="close">Close</p>
+            </div>
+            <div class="full-image">
+              <img
+                src="{% static 'album/images/landing/green.jpg'%}"
+                alt=""
+                class="modal-image-full"
+              />
+            </div>
+            <div class="image-details">
+              <p>
+                lores: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iusto, rerum.
+              </p>
+              <p>
+                lores: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iusto, rerum.
+              </p>
+              <p>
+                lores: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iusto, rerum.
+              </p>
+              <p>
+                lores: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iusto, rerum.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="image">
+          <img
+            class="display-image"
+            src="{% static 'album/images/landing/charity.jpg'%}"
+            alt=""
+          />
+          <div class="modal">
+            <div class="closer-div">
+              <p class="close">Close</p>
+            </div>
+            <div class="full-image">
+              <img
+                src="{% static 'album/images/landing/charity.jpg'%}"
+                alt=""
+                class="modal-image-full"
+              />
+            </div>
+            <div class="image-details">
+              <p>
+                lores: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iusto, rerum.
+              </p>
+              <p>
+                lores: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iusto, rerum.
+              </p>
+              <p>
+                lores: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iusto, rerum.
+              </p>
+              <p>
+                lores: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Iusto, rerum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+    <script src="{% static 'album/js/album.js'%}"></script>
   </body>
 </html>
