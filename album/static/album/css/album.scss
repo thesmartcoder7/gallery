@@ -48,6 +48,24 @@ main {
     justify-content: flex-start;
     font-size: 1vw;
 
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-decoration: none;
+      color: #ffcbcb5e;
+      font-weight: 500;
+      font-size: 1vw;
+      &:hover {
+        color: #e24510;
+      }
+      svg {
+        width: 2vw;
+        height: 2vw;
+      }
+      margin-bottom: 5%;
+    }
+
     form {
       margin: 5% 0;
       display: flex;
@@ -62,6 +80,9 @@ main {
         border-bottom: 0.07vw solid #ffcbcb27;
         outline: none;
         text-transform: capitalize;
+        &:hover {
+          color: #ffcbcb5e;
+        }
 
         option {
           text-transform: capitalize;
@@ -85,7 +106,7 @@ main {
           height: 1.2vw;
           color: #dcdddd;
           &:hover {
-            color: #ffcbcb5e;
+            color: #e24510;
           }
         }
       }

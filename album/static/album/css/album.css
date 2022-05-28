@@ -81,6 +81,32 @@ main .menu {
   font-size: 1vw;
 }
 
+main .menu a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-decoration: none;
+  color: #ffcbcb5e;
+  font-weight: 500;
+  font-size: 1vw;
+  margin-bottom: 5%;
+}
+
+main .menu a:hover {
+  color: #e24510;
+}
+
+main .menu a svg {
+  width: 2vw;
+  height: 2vw;
+}
+
 main .menu form {
   margin: 5% 0;
   display: -webkit-box;
@@ -98,6 +124,10 @@ main .menu form select {
   border-bottom: 0.07vw solid #ffcbcb27;
   outline: none;
   text-transform: capitalize;
+}
+
+main .menu form select:hover {
+  color: #ffcbcb5e;
 }
 
 main .menu form select option {
@@ -130,7 +160,7 @@ main .menu form button svg {
 }
 
 main .menu form button svg:hover {
-  color: #ffcbcb5e;
+  color: #e24510;
 }
 
 main .menu .all-photos {
