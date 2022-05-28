@@ -5,5 +5,5 @@ def home(request):
     return render(request, 'album/index.html')
 
     
-def all_images(request):
+def all(request):
     return render(request, 'album/album.html')
