@@ -1,6 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 @import "mixins";
 
+@keyframes emerge {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 15vw;
+  }
+}
+
 body {
   padding: 3%;
   height: 100vh;
@@ -47,5 +57,50 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    div {
+      background-color: #dcdddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2% 2% 3% 2%;
+      position: absolute;
+
+      img {
+        width: 15vw;
+        animation: emerge 0.5s ease-in;
+      }
+    }
+
+    .one {
+      transform: rotate(30deg);
+      margin-right: -50%;
+      margin-top: -10%;
+    }
+
+    .two {
+      margin-top: 2vw;
+      margin-left: 10%;
+      transform: rotate(-20deg);
+    }
+
+    .three {
+      margin-top: -50%;
+      margin-left: -10%;
+      transform: rotate(10deg);
+    }
+
+    .four {
+      margin-top: 10vw;
+      margin-left: -50%;
+      transform: rotate(-10deg);
+    }
+
+    .five {
+      margin-top: 50%;
+      margin-left: 30%;
+      transform: rotate(40deg);
+    }
   }
 }
