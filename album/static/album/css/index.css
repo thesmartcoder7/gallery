@@ -33,7 +33,7 @@ body {
   height: 100vh;
   width: 100%;
   color: #dcdddd;
-  background-image: url("../images/canon.jpg");
+  background-image: url("../images/global/canon.jpg");
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
