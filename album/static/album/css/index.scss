@@ -1,13 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=DM+Sans:wght@400;500&display=swap");
 @import "mixins";
 
 @keyframes emerge {
   0% {
     width: 0;
+    opacity: 0.5;
   }
 
   100% {
     width: 15vw;
+    opacity: 1;
   }
 }
 
@@ -39,6 +41,7 @@ main {
     width: 50%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -48,6 +51,23 @@ main {
       text-align: center;
       line-height: 6vw;
       letter-spacing: 0.1vw;
+      margin-bottom: 10%;
+    }
+
+    a {
+      text-decoration: none;
+      color: #dcdddd;
+      background-color: #e24510;
+      padding: 1.5% 2.5%;
+      font-size: 1vw;
+      border: 0.15vw solid #e24510;
+      outline: none;
+      border-radius: 0.3vw;
+      font-family: "DM Sans", sans-serif;
+      font-weight: 500;
+      &:hover {
+        background-color: transparent;
+      }
     }
   }
 
@@ -64,12 +84,18 @@ main {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2% 2% 3% 2%;
+      padding: 1.5% 1.5% 3% 1.5%;
       position: absolute;
 
       img {
         width: 15vw;
-        animation: emerge 0.5s ease-in;
+        animation: emerge 1s ease-in;
+      }
+    }
+
+    .zero {
+      img {
+        width: 20vw;
       }
     }
 
