@@ -25,7 +25,8 @@
           </svg>
           &nbsp;&nbsp;Home
         </a>
-        <form action="">
+        <form action="{% url 'album_check' %}" method="POST" target="_blank">
+          {% csrf_token %}
           <select name="category" id="category">
             <option value="category" selected>By Category</option>
             {% if all_categories %}
