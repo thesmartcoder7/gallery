@@ -60,20 +60,20 @@ class Image(models.Model):
         return self.name
 
     
-    # @classmethod
-    # def get_image_by_id(id):
-    #     image = Image.objects.get(id=id).first()
-    #     return image
+    @classmethod
+    def get_image_by_id(cls, id):
+        image = cls.objects.get(id=id)
+        return image
 
-    # @classmethod
-    # def search_by_category(category):
-    #     images = Image.objects.get(category=category).all()
-    #     return images
+    @classmethod
+    def search_by_category(cls, category):
+        images = cls.objects.filter(category=category.id)
+        return images
 
-    # @classmethod
-    # def filter_by_location(location):
-    #     images = Image.objects.get(location=location).all()
-    #     return images
+    @classmethod
+    def filter_by_location(cls, location):
+        images = cls.objects.get(location=location)
+        return images
 
         
 

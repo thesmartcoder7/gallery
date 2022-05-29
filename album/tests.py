@@ -19,9 +19,9 @@ class LocationModelTests(TestCase):
         self.new_location.delete()
         self.assertTrue(len( Location.objects.all()) == 0)
 
-    def test_update_location(self):
-        self.new_location.update("maldives")
-        self.assertTrue(self.new_location.name == 'maldives')
+    # def test_update_location(self):
+    #     self.new_location.update("maldives")
+    #     self.assertTrue(self.new_location.name == 'maldives')
 
     def tearDown(self):
         Location.objects.all().delete()
@@ -45,9 +45,9 @@ class CategoryModelTests(TestCase):
         self.new_category.delete()
         self.assertTrue(len( Category.objects.all()) == 0)
 
-    def test_update_location(self):
-        self.new_category.update("fun")
-        self.assertTrue(self.new_category.name == 'fun')
+    # def test_update_location(self):
+    #     self.new_category.update("fun")
+    #     self.assertTrue(self.new_category.name == 'fun')
 
     def tearDown(self):
         Image.objects.all().delete()
@@ -73,6 +73,18 @@ class ImageModelTests(TestCase):
         self.new_image.save()
         self.new_image.delete()
         self.assertTrue(len( Image.objects.all()) == 0)
+
+    def test_get_image_by_id(self):
+        self.new_image.save()
+        self.assertTrue(Image.get_image_by_id(id=self.new_image.id).name == 'family-trip')
+
+    def test_search_by_category(self):
+        self.new_image.save()
+        self.assertTrue(len(Image.search_by_category(self.new_image.category)) > 0 )
+
+    def test_filter_by_location(self):
+        self.new_image.save()
+        self.assertTrue(Image.filter_by_location(self.new_image.location) == self.new_image)
 
     def tearDown(self):
         Image.objects.all().delete()
