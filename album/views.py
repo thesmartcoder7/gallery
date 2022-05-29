@@ -8,21 +8,26 @@ def home(request):
 
     
 def all(request):
-    print(Image.objects.all()[0].image)
     context = {
         'all_images': Image.objects.all(),
         'all_locations': Location.objects.all(),
         'all_categories': Category.objects.all()
     }
-
     return render(request, 'album/album.html', context=context)
 
 
 def check(request):
     if request.method == 'POST':
-        category = request.POST['category']
-        return redirect('album_category', category = category)
+        return redirect('album_category', category = request.POST['category'] )
+    else:
+        return redirect('album_all')
 
 
 def category(request, category):
-    return render(request, 'album/category.html')
+    context = {
+            'all_images': Image.objects.all(),
+            'all_locations': Location.objects.all(),
+            'all_categories': Category.objects.all(),
+            'category': category
+        }
+    return render(request, 'album/category.html', context = context)

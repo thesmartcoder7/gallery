@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'album/css/album.css'%}" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'album/images/global/camera.png'%}"
+      type="image/x-icon"
+    />
+    {% if category %}
+    <title>Album | {{category|title}}</title>
+    {% else %}
+    <title>Album</title>
+    {% endif %}
+  </head>
+  <body>
+    <main>
+      <div class="menu">
+        <a href="{% url 'album_home' %}">
+          <svg aria-hidden="true" role="img" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="m24 13l-4 4v-3h-9v-2h9V9l4 4M4 20v-8H1l10-9l7 6.3v.7h-2.21L11 5.69l-5 4.5V18h10v-2h2v4H4Z"
+            />
+          </svg>
+          &nbsp;&nbsp;Home
+        </a>
+        <form action="{% url 'album_check' %}" method="POST">
+          {% csrf_token %}
+          <select name="category" id="category">
+            <option value="category" selected>By Category</option>
+            {% if all_categories %}
+            <!--  -->
+            {% for category in all_categories %}
+            <option value="{{category.name}}">{{category.name}}</option>
+            {% endfor %}
+            <!--  -->
+            {% endif %}
+          </select>
+          <button type="submit">
+            <svg aria-hidden="true" role="img" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="m16.325 14.899l5.38 5.38a1.008 1.008 0 0 1-1.427 1.426l-5.38-5.38a8 8 0 1 1 1.426-1.426ZM10 16a6 6 0 1 0 0-12a6 6 0 0 0 0 12Z"
+              />
+            </svg>
+          </button>
+        </form>
+        {% if category %}
+        <p class="all-photos">All from - {{ category|title }}</p>
+        {% else %}
+        <p class="all-photos">View All</p>
+        {% endif %}
+        <br />
+        <p class="location">View By Location :</p>
+        <ul>
+          {% if all_locations %}
+          <!--  -->
+          {% for location in all_locations %}
+          <li class="nav">{{location.name}}</li>
+          {% endfor %}
+          <!--  -->
+          {% endif %}
+        </ul>
+      </div>
+
+      <!-- all photos section -->
+      <div id="all-photos" class="photos active-section">
+        {% if all_images %}
+        <!--  -->
+        {% for image in all_images %}
+        <!--  -->
+        {% if image.category.name == category %}
+        <div class="image">
+          <img class="display-image" src="{{image.image.url}}" alt="" />
+          <div class="modal">
+            <div class="closer-div">
+              <p class="close">Close</p>
+            </div>
+            <div class="full-image">
+              <img
+                src="{{image.image.url}}"
+                alt="{{image.name}}"
+                class="modal-image-full"
+              />
+            </div>
+            <div class="image-details">
+              <p>
+                <span>Name:&nbsp;&nbsp;</span>
+                {{image.name|title}}
+              </p>
+              <p>
+                <span>Category:&nbsp;&nbsp;</span>
+                {{image.category|title}}
+              </p>
+              <p>
+                <span>Location:&nbsp;&nbsp;</span>
+                {{image.location|title}}
+              </p>
+              <p>
+                <span>Description:&nbsp;&nbsp;</span>
+                {{image.description}}
+              </p>
+
+              <p class="copy-url">Share Image</p>
+              <a href="{{image.image.url}}" target="_blank"> Open In New Tab</a>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        <!--  -->
+        {% endfor %}
+        <!--  -->
+        {% endif %}
+      </div>
+
+      <!-- Location based templating -->
+      {% if all_locations %}
+      <!--  -->
+      {% for location in all_locations %}
+      <div id="{{location.name}}" class="photos">
+        {% if all_images %}
+        <!--  -->
+        {% for image in all_images %}
+        <!--  -->
+        {% if image.location.name == location.name %}
+        <!--  -->
+        {% if image.category.name == category %}
+        <div class="image">
+          <img class="display-image" src="{{image.image.url}}" alt="" />
+          <div class="modal">
+            <div class="closer-div">
+              <p class="close">Close</p>
+            </div>
+            <div class="full-image">
+              <img
+                src="{{image.image.url}}"
+                alt="{{image.name}}"
+                class="modal-image-full"
+              />
+            </div>
+            <div class="image-details">
+              <p>
+                <span>Name:&nbsp;&nbsp;</span>
+                {{image.name|title}}
+              </p>
+              <p>
+                <span>Category: &nbsp;&nbsp;</span>
+                {{image.category|title}}
+              </p>
+              <p>
+                <span>Location: &nbsp;&nbsp;</span>
+                {{image.location|title}}
+              </p>
+              <p>
+                <span>Description:&nbsp;&nbsp;</span>
+                {{image.description}}
+              </p>
+
+              <p class="copy-url">Share Image</p>
+              <a href="{{image.image.url}}" target="_blank"> Open In New Tab</a>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        <!--  -->
+        {% endif %}
+        <!--  -->
+        {% endfor %}
+        <!--  -->
+        {% endif %}
+      </div>
+      {% endfor %}
+      <!--  -->
+      {% endif %}
+
+      <!--  -->
+    </main>
+    <script src="{% static 'album/js/album.js'%}"></script>
+  </body>
+</html>
