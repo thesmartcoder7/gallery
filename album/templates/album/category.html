@@ -32,7 +32,7 @@
         <form action="{% url 'album_check' %}" method="POST">
           {% csrf_token %}
           <select name="category" id="category">
-            <option value="category" selected>By Category</option>
+            <option value="all" selected>All Categories</option>
             {% if all_categories %}
             <!--  -->
             {% for category in all_categories %}
@@ -52,7 +52,7 @@
           </button>
         </form>
         {% if category %}
-        <p class="all-photos">All from - {{ category|title }}</p>
+        <p class="all-photos">All from - <span>{{ category|title }}</span></p>
         {% else %}
         <p class="all-photos">View All</p>
         {% endif %}

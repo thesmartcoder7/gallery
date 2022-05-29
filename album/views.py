@@ -18,7 +18,10 @@ def all(request):
 
 def check(request):
     if request.method == 'POST':
-        return redirect('album_category', category = request.POST['category'] )
+        if request.POST['category'] == 'all':
+            return redirect('album_all')
+        else:
+            return redirect('album_category', category = request.POST['category'] )
     else:
         return redirect('album_all')
 

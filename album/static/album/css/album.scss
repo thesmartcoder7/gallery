@@ -119,6 +119,10 @@ main {
       &:hover {
         color: #e24510;
       }
+      span {
+        color: #e24510;
+        font-size: 1.1vw;
+      }
     }
 
     .location {
@@ -134,14 +138,14 @@ main {
         margin: 15% 0;
         padding-left: 5%;
         cursor: pointer;
-        border-left: 0.1vw solid transparent;
+        border-left: 0.15vw solid transparent;
         text-transform: capitalize;
         &:hover {
-          border-left: 0.1vw solid #e24510;
+          border-left: 0.15vw solid #e24510;
         }
 
         &.active {
-          border-left: 0.1vw solid #e24510;
+          border-left: 0.15vw solid #e24510;
         }
       }
     }

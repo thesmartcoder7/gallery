@@ -173,6 +173,11 @@ main .menu .all-photos:hover {
   color: #e24510;
 }
 
+main .menu .all-photos span {
+  color: #e24510;
+  font-size: 1.1vw;
+}
+
 main .menu .location {
   margin: 5% 0;
 }
@@ -188,16 +193,16 @@ main .menu ul li {
   margin: 15% 0;
   padding-left: 5%;
   cursor: pointer;
-  border-left: 0.1vw solid transparent;
+  border-left: 0.15vw solid transparent;
   text-transform: capitalize;
 }
 
 main .menu ul li:hover {
-  border-left: 0.1vw solid #e24510;
+  border-left: 0.15vw solid #e24510;
 }
 
 main .menu ul li.active {
-  border-left: 0.1vw solid #e24510;
+  border-left: 0.15vw solid #e24510;
 }
 
 main .photos {

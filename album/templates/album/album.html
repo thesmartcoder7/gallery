@@ -25,10 +25,10 @@
           </svg>
           &nbsp;&nbsp;Home
         </a>
-        <form action="{% url 'album_check' %}" method="POST" target="_blank">
+        <form action="{% url 'album_check' %}" method="POST">
           {% csrf_token %}
           <select name="category" id="category">
-            <option value="category" selected>By Category</option>
+            <option value="all" selected>All Categories</option>
             {% if all_categories %}
             <!--  -->
             {% for category in all_categories %}
@@ -48,6 +48,7 @@
           </button>
         </form>
         <p class="all-photos">View All</p>
+        <br />
         <p class="location">View By Location :</p>
         <ul>
           {% if all_locations %}
