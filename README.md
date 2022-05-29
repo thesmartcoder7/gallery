@@ -124,7 +124,7 @@ $ python manage.py test
 - CSS3
 - SCSS
 - JavaScript
-- PDjango
+- Django
 
 ## Licence
 
