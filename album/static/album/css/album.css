@@ -117,7 +117,7 @@ main .menu form {
 
 main .menu form select {
   padding: 5% 3% 7% 0;
-  font-size: 1vw;
+  font-size: 0.9vw;
   background-color: transparent;
   border: none;
   color: #dcdddd;
@@ -133,7 +133,8 @@ main .menu form select:hover {
 main .menu form select option {
   text-transform: capitalize;
   color: #4d4d4d;
-  margin: 1% 0;
+  margin: 3% 0;
+  font-size: 0.9vw;
 }
 
 main .menu form button {
@@ -188,6 +189,7 @@ main .menu ul li {
   padding-left: 5%;
   cursor: pointer;
   border-left: 0.1vw solid transparent;
+  text-transform: capitalize;
 }
 
 main .menu ul li:hover {
@@ -207,9 +209,9 @@ main .photos {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow: auto;
@@ -239,7 +241,7 @@ main .photos .image {
           justify-content: center;
   background-color: #ffcbcb27;
   border-radius: 0.7vw;
-  margin: 1.9% 1%;
+  margin: 1.5% 1.5%;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 0.2%;
@@ -300,6 +302,7 @@ main .photos .image .modal .closer-div {
 main .photos .image .modal .closer-div p {
   font-family: "DM Sans", sans-serif;
   font-size: 1.1vw;
+  color: #e24510;
   cursor: pointer;
 }
 
@@ -330,7 +333,7 @@ main .photos .image .modal .full-image img {
 main .photos .image .modal .image-details {
   width: 40%;
   height: 80%;
-  padding-top: 4%;
+  padding: 4% 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -344,6 +347,37 @@ main .photos .image .modal .image-details {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-left: 5%;
+}
+
+main .photos .image .modal .image-details p {
+  font-size: 1vw;
+  margin: 3% 0;
+  line-height: 1.7vw;
+}
+
+main .photos .image .modal .image-details p span {
+  text-transform: capitalize;
+  color: #e24510;
+}
+
+main .photos .image .modal .image-details p.copy-url {
+  color: #e24510;
+  cursor: pointer;
+}
+
+main .photos .image .modal .image-details p.copy-url:hover {
+  color: #ffcbcb5e;
+}
+
+main .photos .image .modal .image-details a {
+  text-decoration: none;
+  color: #e24510;
+  font-size: 1vw;
+  margin: 2% 0;
+  line-height: 1.7vw;
+}
+
+main .photos .image .modal .image-details a:hover {
+  color: #ffcbcb5e;
 }
 /*# sourceMappingURL=album.css.map */

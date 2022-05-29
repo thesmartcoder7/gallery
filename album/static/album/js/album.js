@@ -16,7 +16,7 @@ for (selector of locationSelection) {
     }
     e.target.classList.add("active");
     for (section of allSections) {
-      if (section.id == e.target.innerText) {
+      if (section.id == e.target.innerText.toLowerCase()) {
         section.classList.add("active-section");
       }
     }
