@@ -121,7 +121,6 @@ $ python manage.py test
 ## Technologies
 
 - HTML5
-- CSS3
 - SCSS
 - JavaScript
 - Django
