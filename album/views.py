@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 def home(request):
@@ -6,4 +7,9 @@ def home(request):
 
     
 def all(request):
-    return render(request, 'album/album.html')
+    print(Image.objects.all()[0].image)
+    context = {
+        'all_images': Image.objects.all()
+    }
+
+    return render(request, 'album/album.html', context=context)

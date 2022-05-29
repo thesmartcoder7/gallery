@@ -27,7 +27,7 @@
         </a>
         <form action="">
           <select name="category" id="category">
-            <option value="category" selected>Select Category</option>
+            <option value="category" selected>By Category</option>
             <option value="random1">random1</option>
             <option value="random2">random2</option>
             <option value="random3">random3</option>
@@ -56,6 +56,9 @@
       <!-- all photos section -->
       <div id="all-photos" class="photos active-section">
         <div class="image">
+          {% if all_images %} {% for image in all_images %}
+          <img class="display-image" src="{{image.image.url}}" alt="" />
+          {% endfor %} {% endif %}
           <img
             class="display-image"
             src="{% static 'album/images/landing/crazy.jpg'%}"
