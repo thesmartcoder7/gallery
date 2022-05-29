@@ -19,10 +19,9 @@ class LocationModelTests(TestCase):
         self.new_location.delete()
         self.assertTrue(len( Location.objects.all()) == 0)
 
-    # def test_update_location(self):
-    #     self.new_location.save()
-    #     self.new_location.update(self.new_location.name,"Maldives")
-    #     self.assertTrue(self.new_location.name ==  "Maldives")
+    def test_update_location(self):
+        self.new_location.update("maldives")
+        self.assertTrue(self.new_location.name == 'maldives')
 
     def tearDown(self):
         Location.objects.all().delete()
@@ -45,6 +44,10 @@ class CategoryModelTests(TestCase):
         self.new_category.save()
         self.new_category.delete()
         self.assertTrue(len( Category.objects.all()) == 0)
+
+    def test_update_location(self):
+        self.new_category.update("fun")
+        self.assertTrue(self.new_category.name == 'fun')
 
     def tearDown(self):
         Image.objects.all().delete()

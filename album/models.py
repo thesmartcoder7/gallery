@@ -10,8 +10,8 @@ class Location(models.Model):
     def delete(self, *args, **kw):
         super(Location, Location.objects.get(id=self.id)).delete(*args, **kw)
 
-    # def update(self, property, value):
-    #     super(Location, Location.objects.get(name = self.name)).save(update_fields=[property ])
+    # def update(self, value):
+    #     Location.objects.filter(pk = self.id).update(name = value)
 
     def __str__(self):
         return self.name
@@ -29,8 +29,8 @@ class Category(models.Model):
     def delete(self, *args, **kw):
         super(Category, Category.objects.get(id=self.id)).delete(*args, **kw)
 
-    # def update(self, attribute, value):
-    #     Category.objects.get(id=self.id).update(attribute = value)
+    # def update(self, value):
+    #     Category.objects.filter(id=self.id).update(name = value)
 
     def __str__(self):
         return self.name
