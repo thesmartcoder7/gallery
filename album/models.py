@@ -10,11 +10,13 @@ class Location(models.Model):
     def delete(self, *args, **kw):
         super(Location, Location.objects.get(id=self.id)).delete(*args, **kw)
 
-    # def update(self, value):
-    #     Location.objects.filter(pk = self.id).update(name = value)
-
     def __str__(self):
         return self.name
+
+
+    @classmethod
+    def update(cls, id, value):
+        cls.objects.filter(id = id).update(name = value)
 
     
 
@@ -29,12 +31,13 @@ class Category(models.Model):
     def delete(self, *args, **kw):
         super(Category, Category.objects.get(id=self.id)).delete(*args, **kw)
 
-    # def update(self, value):
-    #     Category.objects.filter(id=self.id).update(name = value)
-
     def __str__(self):
         return self.name
 
+
+    @classmethod
+    def update(cls, id, value):
+        cls.objects.filter(id = id).update(name = value)
 
 
 
@@ -53,12 +56,17 @@ class Image(models.Model):
     def delete(self, *args, **kw):
         super(Image, Image.objects.get(id=self.id)).delete(*args, **kw)
 
-    # def update(self, attribute, value):
-    #     Image.objects.get(id=self.id).update(attribute = value)
-
     def __str__(self):
         return self.name
 
+    @classmethod
+    def update(cls, id, name, description, category, location):
+        cls.objects.filter(id=id).update(
+            name = name,
+            description = description,
+            category = category,
+            location = location
+        )
     
     @classmethod
     def get_image_by_id(cls, id):

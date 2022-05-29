@@ -2,7 +2,9 @@ from unicodedata import name
 from django.test import TestCase
 from .models import *
 
-# Create your tests here.
+
+
+# TestCases for the Location Model
 class LocationModelTests(TestCase):
     def setUp(self):
         self.new_location = Location(name='kenya')
@@ -19,16 +21,18 @@ class LocationModelTests(TestCase):
         self.new_location.delete()
         self.assertTrue(len( Location.objects.all()) == 0)
 
-    # def test_update_location(self):
-    #     self.new_location.update("maldives")
-    #     self.assertTrue(self.new_location.name == 'maldives')
+    def test_update_location(self):
+        self.new_location.save()
+        self.new_location.update(self.new_location.id, "maldives")
+        update = Location.objects.get(name = "maldives")
+        self.assertTrue(update.name == 'maldives')
 
     def tearDown(self):
         Location.objects.all().delete()
 
 
 
-
+# TestCases for the Category Model
 class CategoryModelTests(TestCase):
     def setUp(self):
         self.new_category = Category(name='Vacation')
@@ -45,15 +49,18 @@ class CategoryModelTests(TestCase):
         self.new_category.delete()
         self.assertTrue(len( Category.objects.all()) == 0)
 
-    # def test_update_location(self):
-    #     self.new_category.update("fun")
-    #     self.assertTrue(self.new_category.name == 'fun')
+    def test_update_location(self):
+        self.new_category.save()
+        self.new_category.update(self.new_category.id, "fun")
+        update = Category.objects.get(name = "fun")
+        self.assertTrue(update.name == 'fun')
 
     def tearDown(self):
         Image.objects.all().delete()
 
 
 
+# TestCases for the Image Model
 class ImageModelTests(TestCase):
     def setUp(self):
         location = Location(name='Maldives')
@@ -69,10 +76,25 @@ class ImageModelTests(TestCase):
         self.new_image.save()
         self.assertTrue(len( Image.objects.all()) == 1)
 
-    def test_delete_location(self):
+    def test_delete_image(self):
         self.new_image.save()
         self.new_image.delete()
         self.assertTrue(len( Image.objects.all()) == 0)
+
+    def test_update_Image(self):
+        location = Location(name='Maldives')
+        location.save()
+        category = Category(name='Vacation')
+        category.save()
+        self.new_image.save()
+        self.new_image.update(self.new_image.id, "updated-name", 'updated-description', category.id, location.id)
+        update = Image.objects.get(
+            name = "updated-name",
+            description = 'updated-description',
+            category = category.id,
+            location = location.id
+            )
+        self.assertTrue(update.name == 'updated-name')
 
     def test_get_image_by_id(self):
         self.new_image.save()
