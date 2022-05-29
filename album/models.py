@@ -32,8 +32,8 @@ class Category(models.Model):
     # def update(self, attribute, value):
     #     Category.objects.get(id=self.id).update(attribute = value)
 
-    # def __str__(self):
-    #     return self.name
+    def __str__(self):
+        return self.name
 
 
 
@@ -50,14 +50,14 @@ class Image(models.Model):
     def save(self, *args, **kw):
         super(Image, self).save(*args, **kw)
 
-    # def delete(self):
-    #     Image.objects.get(id=self.id).delete()
+    def delete(self, *args, **kw):
+        super(Image, Image.objects.get(id=self.id)).delete(*args, **kw)
 
     # def update(self, attribute, value):
     #     Image.objects.get(id=self.id).update(attribute = value)
 
-    # def __str__(self):
-    #     return self.name
+    def __str__(self):
+        return self.name
 
     
     # @classmethod
