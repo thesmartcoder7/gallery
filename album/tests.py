@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.test import TestCase
 from .models import *
 
@@ -44,6 +45,31 @@ class CategoryModelTests(TestCase):
         self.new_category.save()
         self.new_category.delete()
         self.assertTrue(len( Category.objects.all()) == 0)
+
+    def tearDown(self):
+        Image.objects.all().delete()
+
+
+
+class ImageModelTests(TestCase):
+    def setUp(self):
+        location = Location(name='Maldives')
+        location.save()
+        category = Category(name='Vacation')
+        category.save()
+        self.new_image = Image(name='family-trip', category=category, location=location, description="this is an image of a family trip to maldives")
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_image, Image))
+
+    def test_image_save(self):
+        self.new_image.save()
+        self.assertTrue(len( Image.objects.all()) == 1)
+
+    def test_delete_location(self):
+        self.new_image.save()
+        self.new_image.delete()
+        self.assertTrue(len( Image.objects.all()) == 0)
 
     def tearDown(self):
         Image.objects.all().delete()
