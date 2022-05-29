@@ -4,6 +4,14 @@
 
 ### By: Samuel Martins
 
+## Table of Content
+
+- [Description](#description)
+- [Installation Requirement](#usage)
+- [Technology Used](#technologies)
+- [Licence](#licence)
+- [Authors Info](#author-info)
+
 ## Description
 
 This is a simple Django application for a personal gallery to showcase my photography skills. [live site]()
@@ -22,22 +30,20 @@ The user is able to;
 
 - View photos based on the location they were taken
 
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 
 ### Prerequisites
 
 These are the things you need to install the software and how to install them
 
 ```
-virtual enviroment: 
+virtual enviroment:
 
 $ pipenv shell
 
-or 
+or
 
 $ python3 -m venv virtual ( or your selected virtual enviroment name )
 ```
@@ -72,9 +78,9 @@ Feel free to fork the project and have fun with it. Happy coding!
 To get a development env running, you simply need the install all the packages reguired from either a requirements.txt file or a pipfile. First you need to activate your virtual environment
 
 ```
-$pipenv shell 
+$pipenv shell
 
-of 
+of
 
 $ source virtualenvname/bin/activate
 ```
@@ -85,15 +91,14 @@ after that, install all the required depencencies
 $ pipenv install //pretty much takes care of installing all depencies for you
 ```
 
-
-After this,  you can run the application using the commands that come in the make file. for this case, it is either of the following:
+After this, you can run the application using the commands that come in the make file. for this case, it is either of the following:
 
 ```
 $ make
 
 or
 
-$ make run 
+$ make run
 
 or
 
@@ -108,7 +113,7 @@ If you want to run tests for the entire project, you need only run this command:
 ```
 $ make test
 
-or 
+or
 
 $ python manage.py test
 ```
@@ -121,12 +126,9 @@ $ python manage.py test
 - JavaScript
 - PDjango
 
-
 ## Licence
 
 Copyright (c) Samuel Martins - [MIT Licence](LICENSE)
-
-
 
 ## Author Info
 
