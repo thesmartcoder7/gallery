@@ -29,18 +29,21 @@ class LocationModelTests(TestCase):
 
 
 
-# class ImageModelTest(TestCase):
-#     def setUp(self):
-#         location = Location(name='Maldives')
-#         category = Category(name='Vacation')
-#         self.new_image = Image(name='family in maldives', category=category, location=location, description='this was the time my family and I went to maldives for the holidays')
+class CategoryModelTests(TestCase):
+    def setUp(self):
+        self.new_category = Category(name='Vacation')
 
-#     def test_instance(self):
-#         self.assertTrue(isinstance(self.new_image, Image))
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_category, Category))
 
-#     def test_image_save(self):
-#         self.new_image.save()
-#         self.assertTrue(len( Image.objects.all()) == 1)
+    def test_image_save(self):
+        self.new_category.save()
+        self.assertTrue(len( Category.objects.all()) == 1)
 
-#     def tearDown(self):
-#         Image.objects.all().delete()
+    def test_delete_location(self):
+        self.new_category.save()
+        self.new_category.delete()
+        self.assertTrue(len( Category.objects.all()) == 0)
+
+    def tearDown(self):
+        Image.objects.all().delete()
