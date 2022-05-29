@@ -1,87 +1,136 @@
-# Project Title
+# Gallery Escape
 
-One Paragraph of project description goes here
+![Project Image](album/static/album/images/global/readme-image.png)
+
+### By: Samuel Martins
+
+## Description
+
+This is a simple Django application for a personal gallery to showcase my photography skills. [live site]()
+
+## Behaviour Driven Development
+
+The user is able to;
+
+- View different photos that interest them
+
+- Click on a single photo to expand it and also view the details per photo. The photo appears on a modal within the same route as the main page.
+
+- Search for different photo categories within the app
+
+- Copy a link to the photo for sharing purposes
+
+- View photos based on the location they were taken
+
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+
 ### Prerequisites
 
-What things you need to install the software and how to install them
+These are the things you need to install the software and how to install them
 
 ```
-Give examples
+virtual enviroment: 
+
+$ pipenv shell
+
+or 
+
+$ python3 -m venv virtual ( or your selected virtual enviroment name )
 ```
+
+### 1. Local Repository
+
+- Make sure you have a stable internet to have the ability to clone the repository.
+- Type the following command in your terminal to clone this repository
+
+```
+git clone https://github.com/thesmartcoder7/gallery.git
+
+```
+
+If you are using SSH, use the following command
+
+```
+git clone git@github.com:thesmartcoder7/gallery.git
+```
+
+When you run the commands successfully, you should have a local version of this repository.
+
+### 2. Online Repository
+
+- Make sure you have a stable internet for forking this repository.
+- According to the license, you can fork this project. You need to click on the forking icon and it will be added as one of your repositories
+
+Feel free to fork the project and have fun with it. Happy coding!
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+To get a development env running, you simply need the install all the packages reguired from either a requirements.txt file or a pipfile. First you need to activate your virtual environment
 
 ```
-Give the example
+$pipenv shell 
+
+of 
+
+$ source virtualenvname/bin/activate
 ```
 
-And repeat
+after that, install all the required depencencies
 
 ```
-until finished
+$ pipenv install //pretty much takes care of installing all depencies for you
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+
+After this,  you can run the application using the commands that come in the make file. for this case, it is either of the following:
+
+```
+$ make
+
+or
+
+$ make run 
+
+or
+
+$ python manage.py runserver
+
+```
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+If you want to run tests for the entire project, you need only run this command:
 
 ```
-Give an example
+$ make test
+
+or 
+
+$ python manage.py test
 ```
 
-### And coding style tests
+## Technologies
 
-Explain what these tests test and why
+- HTML5
+- CSS3
+- SCSS
+- JavaScript
+- PDjango
 
-```
-Give an example
-```
 
-## Deployment
+## Licence
 
-Add additional notes about how to deploy this on a live system
+Copyright (c) Samuel Martins - [MIT Licence](LICENSE)
 
-## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
-## Contributing
+## Author Info
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+- Twitter - [@thesmartcoder7](https://twitter.com/thesmartcoder7)
+- Linkedin - [Samuel Martins](https://www.linkedin.com/in/samuel-martins-09839b115/)
+- Website - [Samuel Martins](https://smart-code.dev)
+- blog - [Samuel Martins](https://samuel-martins.medium.com/)
