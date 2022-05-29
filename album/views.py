@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from .models import *
-from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
@@ -34,3 +33,8 @@ def category(request, category):
             'category': category
         }
     return render(request, 'album/category.html', context = context)
+
+
+
+def handle_not_found(request, exception):
+    return render(request, 'album/not-found.html')
