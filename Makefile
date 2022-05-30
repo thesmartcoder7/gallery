@@ -1,6 +1,9 @@
 run:
 	python manage.py runserver
 
+check:
+	python manage.py check --deploy
+
 shell:
 	python manage.py shell
 
