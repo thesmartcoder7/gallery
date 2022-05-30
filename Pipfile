@@ -13,6 +13,7 @@ django-heroku = "*"
 python-decouple = "*"
 dj-database-url = "*"
 dj-static = "*"
+django-cloudinary-storage = "*"
 
 [dev-packages]
 
