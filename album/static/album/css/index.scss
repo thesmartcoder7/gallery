@@ -40,6 +40,14 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include mobile {
+    flex-direction: column-reverse;
+    padding: 5%;
+  }
+  @include tablet {
+    flex-direction: column-reverse;
+    padding: 5%;
+  }
 
   .left {
     padding: 5%;
@@ -49,6 +57,12 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include mobile {
+      width: 100%;
+    }
+    @include tablet {
+      width: 100%;
+    }
 
     h1 {
       font-size: 4vw;
@@ -57,6 +71,18 @@ main {
       line-height: 6vw;
       letter-spacing: 0.1vw;
       margin-bottom: 10%;
+      @include mobile {
+        font-size: 10vw;
+        line-height: 15vw;
+      }
+      @include tablet {
+        font-size: 7vw;
+        line-height: 10vw;
+      }
+      @include tablet-pro {
+        font-size: 5vw;
+        line-height: 7vw;
+      }
     }
 
     a {
@@ -73,6 +99,21 @@ main {
       &:hover {
         background-color: transparent;
       }
+      @include mobile {
+        padding: 4% 8%;
+        font-size: 4vw;
+        border-radius: 3vw;
+      }
+      @include tablet {
+        padding: 3% 7%;
+        font-size: 2.1vw;
+        border-radius: 2vw;
+      }
+      @include tablet-pro {
+        padding: 3% 7%;
+        font-size: 1.3vw;
+        border-radius: 1vw;
+      }
     }
   }
 
@@ -83,6 +124,12 @@ main {
     align-items: center;
     justify-content: center;
     position: relative;
+    @include mobile {
+      width: 100%;
+    }
+    @include tablet {
+      width: 100%;
+    }
 
     div {
       background-color: #dcdddd;
@@ -95,12 +142,24 @@ main {
       img {
         width: 15vw;
         animation: emerge 1s ease-in;
+        @include mobile {
+          width: 30vw;
+        }
+        @include tablet {
+          width: 20vw;
+        }
+        @include tablet-pro {
+          width: 18vw;
+        }
       }
     }
 
     .zero {
       img {
         width: 20vw;
+        @include tablet {
+          width: 30vw;
+        }
       }
     }
 
@@ -114,12 +173,20 @@ main {
       margin-top: 2vw;
       margin-left: 10%;
       transform: rotate(-20deg);
+      img {
+        @include tablet {
+          width: 25vw;
+        }
+      }
     }
 
     .three {
       margin-top: -50%;
       margin-left: -10%;
       transform: rotate(10deg);
+      @include tablet {
+        margin-top: -30%;
+      }
     }
 
     .four {
@@ -132,6 +199,10 @@ main {
       margin-top: 50%;
       margin-left: 30%;
       transform: rotate(40deg);
+      @include tablet {
+        margin-top: 30%;
+        transform: rotate(20deg);
+      }
     }
   }
 }
