@@ -24,7 +24,6 @@ from django.conf.urls import handler404
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('album.urls')),
-    path('album/', include('album.urls'))
 ]
 
 if settings.DEBUG:

@@ -166,7 +166,7 @@ main .left a:hover {
 @media (max-width: 500px) {
   main .left a {
     padding: 4% 8%;
-    font-size: 4vw;
+    font-size: 3vw;
     border-radius: 3vw;
   }
 }
