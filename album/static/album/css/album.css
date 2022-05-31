@@ -426,6 +426,19 @@ main .photos .image .modal {
   display: none;
 }
 
+@media (max-width: 500px) {
+  main .photos .image .modal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 20% 5%;
+  }
+}
+
 main .photos .image .modal .closer-div {
   position: absolute;
   top: 3%;
@@ -470,9 +483,26 @@ main .photos .image .modal .full-image {
   border-right: 0.07vw solid #ffcbcb5e;
 }
 
+@media (max-width: 500px) {
+  main .photos .image .modal .full-image {
+    width: 100%;
+    height: auto;
+    border: none;
+    padding-bottom: 10%;
+    border-bottom: 0.07vw solid #ffcbcb5e;
+  }
+}
+
 main .photos .image .modal .full-image img {
   width: auto;
   height: 80%;
+}
+
+@media (max-width: 500px) {
+  main .photos .image .modal .full-image img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 main .photos .image .modal .image-details {
@@ -494,10 +524,24 @@ main .photos .image .modal .image-details {
           justify-content: flex-start;
 }
 
+@media (max-width: 500px) {
+  main .photos .image .modal .image-details {
+    width: 100%;
+    height: auto;
+  }
+}
+
 main .photos .image .modal .image-details p {
   font-size: 1vw;
   margin: 3% 0;
   line-height: 1.7vw;
+}
+
+@media (max-width: 500px) {
+  main .photos .image .modal .image-details p {
+    font-size: 4vw;
+    line-height: 7vw;
+  }
 }
 
 main .photos .image .modal .image-details p span {
@@ -520,6 +564,12 @@ main .photos .image .modal .image-details a {
   font-size: 1vw;
   margin: 2% 0;
   line-height: 1.7vw;
+}
+
+@media (max-width: 500px) {
+  main .photos .image .modal .image-details a {
+    font-size: 3.5vw;
+  }
 }
 
 main .photos .image .modal .image-details a:hover {

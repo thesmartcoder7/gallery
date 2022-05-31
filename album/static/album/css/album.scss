@@ -276,6 +276,11 @@ main {
         border-radius: 1vw;
         animation: appear 0.5s ease-in-out;
         display: none;
+        @include mobile {
+          flex-direction: column;
+          justify-content: flex-start;
+          padding: 20% 5%;
+        }
 
         .closer-div {
           position: absolute;
@@ -306,10 +311,21 @@ main {
           align-items: center;
           justify-content: center;
           border-right: 0.07vw solid #ffcbcb5e;
+          @include mobile {
+            width: 100%;
+            height: auto;
+            border: none;
+            padding-bottom: 10%;
+            border-bottom: 0.07vw solid #ffcbcb5e;
+          }
 
           img {
             width: auto;
             height: 80%;
+            @include mobile {
+              width: 100%;
+              height: auto;
+            }
           }
         }
 
@@ -321,10 +337,18 @@ main {
           flex-direction: column;
           align-items: flex-start;
           justify-content: flex-start;
+          @include mobile {
+            width: 100%;
+            height: auto;
+          }
           p {
             font-size: 1vw;
             margin: 3% 0;
             line-height: 1.7vw;
+            @include mobile {
+              font-size: 4vw;
+              line-height: 7vw;
+            }
             span {
               text-transform: capitalize;
               color: #e24510;
@@ -343,6 +367,9 @@ main {
             font-size: 1vw;
             margin: 2% 0;
             line-height: 1.7vw;
+            @include mobile {
+              font-size: 3.5vw;
+            }
             &:hover {
               color: #ffcbcb5e;
             }
