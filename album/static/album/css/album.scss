@@ -36,9 +36,10 @@ main {
   border-radius: 1vw;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   @include mobile {
     flex-direction: column;
+    justify-content: flex-start;
   }
 
   .menu {
@@ -219,12 +220,15 @@ main {
     display: none;
     @include mobile {
       width: 100%;
+      height: auto;
       margin-top: 5%;
       padding: 2% 4%;
     }
 
     &.active-section {
       display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
     }
 
     .image {
