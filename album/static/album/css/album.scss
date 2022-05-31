@@ -400,6 +400,14 @@ main {
             padding-bottom: 10%;
             border-bottom: 0.07vw solid #ffcbcb5e;
           }
+          @include tablet {
+            width: 100%;
+            height: auto;
+          }
+          @include tablet-pro {
+            width: 100%;
+            height: auto;
+          }
 
           img {
             width: auto;
