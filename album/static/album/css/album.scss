@@ -394,19 +394,16 @@ main {
           justify-content: center;
           border-right: 0.07vw solid #ffcbcb5e;
           @include mobile {
-            width: 100%;
-            height: auto;
+            height: 80%;
             border: none;
             padding-bottom: 10%;
             border-bottom: 0.07vw solid #ffcbcb5e;
           }
           @include tablet {
-            width: 100%;
-            height: auto;
+            height: 80%;
           }
           @include tablet-pro {
-            width: 100%;
-            height: auto;
+            height: 80%;
           }
 
           img {

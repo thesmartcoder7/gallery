@@ -645,8 +645,7 @@ main .photos .image .modal .full-image {
 
 @media (max-width: 500px) {
   main .photos .image .modal .full-image {
-    width: 100%;
-    height: auto;
+    height: 80%;
     border: none;
     padding-bottom: 10%;
     border-bottom: 0.07vw solid #ffcbcb5e;
@@ -655,15 +654,13 @@ main .photos .image .modal .full-image {
 
 @media (min-width: 501px) and (max-width: 768px) {
   main .photos .image .modal .full-image {
-    width: 100%;
-    height: auto;
+    height: 80%;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   main .photos .image .modal .full-image {
-    width: 100%;
-    height: auto;
+    height: 80%;
   }
 }
 
