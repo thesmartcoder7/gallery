@@ -646,6 +646,7 @@ main .photos .image .modal .full-image {
 @media (max-width: 500px) {
   main .photos .image .modal .full-image {
     height: 80%;
+    width: 100%;
     border: none;
     padding-bottom: 10%;
     border-bottom: 0.07vw solid #ffcbcb5e;

@@ -395,6 +395,7 @@ main {
           border-right: 0.07vw solid #ffcbcb5e;
           @include mobile {
             height: 80%;
+            width: 100%;
             border: none;
             padding-bottom: 10%;
             border-bottom: 0.07vw solid #ffcbcb5e;
