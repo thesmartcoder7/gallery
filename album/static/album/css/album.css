@@ -316,6 +316,7 @@ main .menu .all-photos {
 
 @media (max-width: 500px) {
   main .menu .all-photos {
+    width: 100%;
     margin: 0 5%;
     font-size: 4vw;
   }
@@ -340,6 +341,25 @@ main .menu .all-photos:hover {
 main .menu .all-photos span {
   color: #e24510;
   font-size: 1.1vw;
+}
+
+@media (max-width: 500px) {
+  main .menu .all-photos span {
+    margin: 0 5%;
+    font-size: 4vw;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+  main .menu .all-photos span {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .menu .all-photos span {
+    font-size: 1.5vw;
+  }
 }
 
 main .menu .location {
@@ -560,6 +580,7 @@ main .photos .image .modal {
   -webkit-animation: appear 0.5s ease-in-out;
           animation: appear 0.5s ease-in-out;
   display: none;
+  overflow: auto;
 }
 
 @media (max-width: 500px) {
@@ -708,12 +729,14 @@ main .photos .image .modal .image-details {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  overflow: auto;
 }
 
 @media (max-width: 500px) {
   main .photos .image .modal .image-details {
+    overflow: auto;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 

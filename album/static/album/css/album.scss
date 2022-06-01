@@ -191,6 +191,7 @@ main {
       margin: 5% 0;
       cursor: pointer;
       @include mobile {
+        width: 100%;
         margin: 0 5%;
         font-size: 4vw;
       }
@@ -206,6 +207,16 @@ main {
       span {
         color: #e24510;
         font-size: 1.1vw;
+        @include mobile {
+          margin: 0 5%;
+          font-size: 4vw;
+        }
+        @include tablet {
+          font-size: 2vw;
+        }
+        @include tablet-pro {
+          font-size: 1.5vw;
+        }
       }
     }
 
@@ -436,8 +447,9 @@ main {
           justify-content: flex-start;
           overflow: auto;
           @include mobile {
+            overflow: auto;
             width: 100%;
-            height: auto;
+            height: 100%;
           }
           p {
             font-size: 1vw;
