@@ -346,6 +346,7 @@ main {
         border-radius: 1vw;
         animation: appear 0.5s ease-in-out;
         display: none;
+        overflow: auto;
         @include mobile {
           flex-direction: column;
           justify-content: flex-start;
