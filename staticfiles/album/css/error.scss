@@ -33,6 +33,12 @@ main {
     font-weight: 900;
     letter-spacing: 1vw;
     color: #e24510;
+    @include mobile {
+      font-size: 25vw;
+      font-weight: 900;
+      letter-spacing: 1.5vw;
+      color: #e24510;
+    }
   }
 
   h2 {
@@ -41,6 +47,13 @@ main {
     letter-spacing: 0.05vw;
     margin-bottom: 5%;
     color: #fff;
+    text-align: center;
+    @include mobile {
+      font-size: 3.5vw;
+      font-weight: 700;
+      letter-spacing: 0.05vw;
+      margin-bottom: 5%;
+    }
   }
 
   a {
@@ -54,6 +67,11 @@ main {
     border-radius: 0.3vw;
     &:hover {
       background-color: transparent;
+    }
+    @include mobile {
+      padding: 2% 4%;
+      font-size: 2.5vw;
+      border-radius: 0.6vw;
     }
   }
 }
