@@ -412,18 +412,15 @@ main {
             height: 80%;
             width: 100%;
             border: none;
-            padding: 5%;
             padding-bottom: 10%;
             border-bottom: 0.07vw solid #ffcbcb5e;
             object-fit: fill;
           }
           @include tablet {
-            padding: 5%;
             height: 80%;
             object-fit: fill;
           }
           @include tablet-pro {
-            padding: 5%;
             height: 80%;
             object-fit: fill;
           }

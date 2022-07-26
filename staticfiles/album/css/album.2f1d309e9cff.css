@@ -32,7 +32,7 @@ body {
   height: 100vh;
   width: 100%;
   color: #dcdddd;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/global/canon.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/global/canon.b8be35dd9ac1.jpg");
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -507,7 +507,6 @@ main .photos .image .modal .full-image {
     height: 80%;
     width: 100%;
     border: none;
-    padding: 5%;
     padding-bottom: 10%;
     border-bottom: 0.07vw solid rgba(255, 203, 203, 0.368627451);
     -o-object-fit: fill;
@@ -516,7 +515,6 @@ main .photos .image .modal .full-image {
 }
 @media (min-width: 501px) and (max-width: 768px) {
   main .photos .image .modal .full-image {
-    padding: 5%;
     height: 80%;
     -o-object-fit: fill;
        object-fit: fill;
@@ -524,7 +522,6 @@ main .photos .image .modal .full-image {
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   main .photos .image .modal .full-image {
-    padding: 5%;
     height: 80%;
     -o-object-fit: fill;
        object-fit: fill;
