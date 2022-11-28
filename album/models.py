@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+
 class Location(models.Model):
     name = models.CharField(max_length=100)
 
@@ -13,13 +15,9 @@ class Location(models.Model):
     def __str__(self):
         return self.name
 
-
     @classmethod
     def update(cls, id, value):
-        cls.objects.filter(id = id).update(name = value)
-
-    
-
+        cls.objects.filter(id=id).update(name=value)
 
 
 class Category(models.Model):
@@ -34,13 +32,12 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = "Categories"
 
     @classmethod
     def update(cls, id, value):
-        cls.objects.filter(id = id).update(name = value)
-
-
-
+        cls.objects.filter(id=id).update(name=value)
 
 
 class Image(models.Model):
@@ -62,12 +59,12 @@ class Image(models.Model):
     @classmethod
     def update(cls, id, name, description, category, location):
         cls.objects.filter(id=id).update(
-            name = name,
-            description = description,
-            category = category,
-            location = location
+            name=name,
+            description=description,
+            category=category,
+            location=location
         )
-    
+
     @classmethod
     def get_image_by_id(cls, id):
         image = cls.objects.get(id=id)
@@ -82,9 +79,3 @@ class Image(models.Model):
     def filter_by_location(cls, location):
         images = cls.objects.get(location=location)
         return images
-
-        
-
-    
-
-

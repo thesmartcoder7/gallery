@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 SECRET_KEY = os.getenv('SECRET_KEY')
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -77,14 +77,14 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 # Database settings
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': os.getenv('DB_NAME'),
         'USER': os.getenv('DB_USER'),
         'PASSWORD': os.getenv('DB_PASSWORD'),
     }
-    
-}
 
+}
 
 
 # Password validation
@@ -125,7 +125,7 @@ CSRF_COOKIE_SECURE = True
 
 
 # HSTS settings
-SECURE_HSTS_SECONDS = 31536000 # this is equivalent to 1 year
+SECURE_HSTS_SECONDS = 31536000  # this is equivalent to 1 year
 SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
@@ -142,7 +142,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static/" ),
+    os.path.join(BASE_DIR, "static/"),
 ]
 
 # Default primary key field type
@@ -155,8 +155,7 @@ django_heroku.settings(locals())
 
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'), 
-    'API_KEY': os.getenv('CLOUDINARY_API_KEY'), 
-    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET') 
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET')
 }
-  

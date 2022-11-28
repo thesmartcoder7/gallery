@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 django = "*"
-psycopg2 = "*"
 pillow = "*"
 gunicorn = "*"
 whitenoise = "*"
@@ -16,6 +15,7 @@ dj-static = "*"
 django-cloudinary-storage = "*"
 python-dotenv = "*"
 psycopg2-binary = "*"
+mysqlclient = "*"
 
 [dev-packages]
 
