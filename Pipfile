@@ -8,14 +8,10 @@ django = "*"
 pillow = "*"
 gunicorn = "*"
 whitenoise = "*"
-django-heroku = "*"
-python-decouple = "*"
-dj-database-url = "*"
 dj-static = "*"
 django-cloudinary-storage = "*"
 python-dotenv = "*"
-psycopg2-binary = "*"
-mysqlclient = "*"
+asgiref = "*"
 
 [dev-packages]
 

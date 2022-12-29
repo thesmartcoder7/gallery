@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 # from distutils.debug import DEBUG
 from pathlib import Path
 import os
-import django_heroku
 from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
@@ -77,18 +76,18 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 # Database settings
 # for mysql ( install mysqlclient )
 # --------------------------------
-DATABASES = {
-    'default': {
-        # for postgres, use
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         # for postgres, use
+#         # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': os.getenv('DB_NAME'),
+#         'USER': os.getenv('DB_USER'),
+#         'PASSWORD': os.getenv('DB_PASSWORD'),
+#     }
+# }
 
-# for postgres ( install psycopy2 or psycopg2 binary )
+# for postgres(install psycopy2 or psycopg2 binary)
 # -------------
 # DATABASES = {
 #     'default': {
@@ -101,12 +100,12 @@ DATABASES = {
 
 # for sqlite3 ( install nothing. this ships natively with django )
 # --------------
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR/'db,sqlite3'
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR/'db,sqlite3'
+    }
+}
 
 
 # Password validation
@@ -164,17 +163,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static/"),
+    os.path.join(BASE_DIR, "/static/"),
 ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Configure Django App for Heroku.
-django_heroku.settings(locals())
-
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
