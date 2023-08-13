@@ -1,0 +1,648 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=DM+Sans:wght@400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  padding: 3%;
+  height: 100vh;
+  width: 100%;
+  color: #dcdddd;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/global/canon.b8be35dd9ac1.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+main {
+  padding: 3%;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(1.5vw);
+          backdrop-filter: blur(1.5vw);
+  border: 0.1vw solid rgba(255, 203, 203, 0.1529411765);
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media (max-width: 500px) {
+  main {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+main .menu {
+  width: 15%;
+  height: 90%;
+  border-right: 0.07vw solid rgba(255, 203, 203, 0.1529411765);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 1vw;
+}
+@media (max-width: 500px) {
+  main .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: 0;
+    height: auto;
+    width: 100%;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .menu {
+    width: 30%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .menu {
+    width: 20%;
+  }
+}
+main .menu a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: #e24510;
+  font-weight: 500;
+  font-size: 1vw;
+  margin-bottom: 5%;
+}
+@media (max-width: 500px) {
+  main .menu a {
+    font-size: 4vw;
+    width: 25%;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .menu a {
+    font-size: 2.5vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .menu a {
+    font-size: 2vw;
+  }
+}
+main .menu a:hover {
+  color: rgba(255, 203, 203, 0.368627451);
+}
+main .menu a svg {
+  width: 2vw;
+  height: 2vw;
+}
+@media (max-width: 500px) {
+  main .menu a svg {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .menu a svg {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .menu a svg {
+    width: 3vw;
+    height: 3vw;
+  }
+}
+main .menu form {
+  margin: 5% 0;
+  display: flex;
+  width: 90%;
+}
+@media (max-width: 500px) {
+  main .menu form {
+    width: 70%;
+    margin: 0;
+    margin-top: 4vw;
+    justify-content: flex-end;
+  }
+}
+main .menu form select {
+  padding: 5% 3% 7% 0;
+  font-size: 0.9vw;
+  background-color: transparent;
+  border: none;
+  color: #dcdddd;
+  border-bottom: 0.07vw solid rgba(255, 203, 203, 0.1529411765);
+  outline: none;
+  text-transform: capitalize;
+}
+@media (max-width: 500px) {
+  main .menu form select {
+    font-size: 3.5vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .menu form select {
+    font-size: 2vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .menu form select {
+    font-size: 1.5vw;
+  }
+}
+main .menu form select:hover {
+  color: rgba(255, 203, 203, 0.368627451);
+}
+main .menu form select option {
+  text-transform: capitalize;
+  color: rgb(77, 77, 77);
+  margin: 3% 0;
+  font-size: 0.9vw;
+}
+@media (max-width: 500px) {
+  main .menu form select option {
+    font-size: 3.5vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .menu form select option {
+    font-size: 2vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .menu form select option {
+    font-size: 1.5vw;
+  }
+}
+main .menu form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-bottom: 0.07vw solid rgba(255, 203, 203, 0.1529411765);
+  background-color: transparent;
+  cursor: pointer;
+  padding: 2% 5%;
+}
+main .menu form button svg {
+  width: 1.2vw;
+  height: 1.2vw;
+  color: #dcdddd;
+}
+@media (max-width: 500px) {
+  main .menu form button svg {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .menu form button svg {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .menu form button svg {
+    width: 1.8vw;
+    height: 1.8vw;
+  }
+}
+main .menu form button svg:hover {
+  color: #e24510;
+}
+main .menu .all-photos {
+  margin: 5% 0;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  main .menu .all-photos {
+    width: 100%;
+    margin: 0 5%;
+    font-size: 4vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .menu .all-photos {
+    font-size: 2vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .menu .all-photos {
+    font-size: 1.5vw;
+  }
+}
+main .menu .all-photos:hover {
+  color: #e24510;
+}
+main .menu .all-photos span {
+  color: #e24510;
+  font-size: 1.1vw;
+}
+@media (max-width: 500px) {
+  main .menu .all-photos span {
+    margin: 0 5%;
+    font-size: 4vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .menu .all-photos span {
+    font-size: 2vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .menu .all-photos span {
+    font-size: 1.5vw;
+  }
+}
+main .menu .location {
+  margin: 5% 0;
+}
+@media (max-width: 500px) {
+  main .menu .location {
+    margin: 2% 5%;
+    width: 100%;
+    font-size: 4vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .menu .location {
+    font-size: 2vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .menu .location {
+    font-size: 1.5vw;
+  }
+}
+main .menu ul {
+  list-style: none;
+  padding-left: 15%;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  main .menu ul {
+    padding-left: 3%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: auto;
+  }
+}
+main .menu ul li {
+  width: 100%;
+  margin: 15% 0;
+  padding-left: 5%;
+  cursor: pointer;
+  border-left: 0.15vw solid transparent;
+  text-transform: capitalize;
+}
+@media (max-width: 500px) {
+  main .menu ul li {
+    font-size: 4vw;
+    margin: 2% 0;
+    padding-left: 2%;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .menu ul li {
+    font-size: 2vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .menu ul li {
+    font-size: 1.5vw;
+  }
+}
+main .menu ul li:hover {
+  border-left: 0.15vw solid #e24510;
+}
+main .menu ul li.active {
+  border-left: 0.15vw solid #e24510;
+}
+main .photos {
+  width: 85%;
+  height: 90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  overflow: auto;
+  padding: 2% 5%;
+  -webkit-animation: appear 0.5s ease-in-out;
+          animation: appear 0.5s ease-in-out;
+  display: none;
+}
+@media (max-width: 500px) {
+  main .photos {
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    padding: 2% 4%;
+  }
+}
+main .photos.active-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+main .photos .image {
+  width: 30%;
+  height: 13vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 203, 203, 0.1529411765);
+  border-radius: 0.7vw;
+  margin: 1.5% 1.5%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0.2%;
+  position: relative;
+}
+@media (max-width: 500px) {
+  main .photos .image {
+    width: 47%;
+    height: 23vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .photos .image {
+    width: 47%;
+    height: 18vw;
+  }
+}
+main .photos .image .display-image {
+  width: 100%;
+  height: 12.8vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.6vw;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 500px) {
+  main .photos .image .display-image {
+    width: 100%;
+    height: 22.8vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .photos .image .display-image {
+    width: 100%;
+    height: 17.5vw;
+  }
+}
+main .photos .image .display-image:hover {
+  transform: scale(1.03);
+  transition: 0.3s ease-in-out;
+}
+main .photos .image .modal {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1vw;
+  -webkit-animation: appear 0.5s ease-in-out;
+          animation: appear 0.5s ease-in-out;
+  display: none;
+  overflow: auto;
+}
+@media (max-width: 500px) {
+  main .photos .image .modal {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20% 5% 5% 5%;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .photos .image .modal {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20% 5% 5% 5%;
+  }
+}
+main .photos .image .modal .closer-div {
+  position: absolute;
+  top: 3%;
+  left: 95%;
+}
+@media (max-width: 500px) {
+  main .photos .image .modal .closer-div {
+    left: 83%;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .photos .image .modal .closer-div {
+    left: 89%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .photos .image .modal .closer-div {
+    left: 91%;
+  }
+}
+main .photos .image .modal .closer-div p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.1vw;
+  color: #e24510;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  main .photos .image .modal .closer-div p {
+    font-size: 3.5vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .photos .image .modal .closer-div p {
+    font-size: 2vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .photos .image .modal .closer-div p {
+    font-size: 1.5vw;
+  }
+}
+main .photos .image .modal .closer-div p:hover {
+  color: rgba(255, 203, 203, 0.368627451);
+}
+main .photos .image .modal .full-image {
+  width: 60%;
+  height: 80%;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 0.07vw solid rgba(255, 203, 203, 0.368627451);
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+@media (max-width: 500px) {
+  main .photos .image .modal .full-image {
+    height: 80%;
+    width: 100%;
+    border: none;
+    padding: 5%;
+    padding-bottom: 10%;
+    border-bottom: 0.07vw solid rgba(255, 203, 203, 0.368627451);
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .photos .image .modal .full-image {
+    height: 80%;
+    width: 100%;
+    border: none;
+    padding: 0;
+    padding-bottom: 10%;
+    border-bottom: 0.07vw solid rgba(255, 203, 203, 0.368627451);
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+}
+main .photos .image .modal .full-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 500px) {
+  main .photos .image .modal .full-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .photos .image .modal .full-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .photos .image .modal .full-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+main .photos .image .modal .image-details {
+  width: 40%;
+  height: 80%;
+  padding: 4% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: auto;
+}
+@media (max-width: 500px) {
+  main .photos .image .modal .image-details {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .photos .image .modal .image-details {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+  }
+}
+main .photos .image .modal .image-details p {
+  font-size: 1vw;
+  margin: 3% 0;
+  line-height: 1.7vw;
+}
+@media (max-width: 500px) {
+  main .photos .image .modal .image-details p {
+    font-size: 4vw;
+    line-height: 7vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .photos .image .modal .image-details p {
+    font-size: 2vw;
+    line-height: 4vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .photos .image .modal .image-details p {
+    font-size: 1.5vw;
+    line-height: 3vw;
+  }
+}
+main .photos .image .modal .image-details p span {
+  text-transform: capitalize;
+  color: #e24510;
+}
+main .photos .image .modal .image-details p.copy-url {
+  color: #e24510;
+  cursor: pointer;
+}
+main .photos .image .modal .image-details p.copy-url:hover {
+  color: rgba(255, 203, 203, 0.368627451);
+}
+main .photos .image .modal .image-details a {
+  text-decoration: none;
+  color: #e24510;
+  font-size: 1vw;
+  margin: 2% 0;
+  line-height: 1.7vw;
+}
+@media (max-width: 500px) {
+  main .photos .image .modal .image-details a {
+    font-size: 3.5vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .photos .image .modal .image-details a {
+    font-size: 1.8vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .photos .image .modal .image-details a {
+    font-size: 1.4vw;
+  }
+}
+main .photos .image .modal .image-details a:hover {
+  color: rgba(255, 203, 203, 0.368627451);
+}/*# sourceMappingURL=album.css.map */

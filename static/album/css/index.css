@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=DM+Sans:wght@400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@-webkit-keyframes emerge {
+  0% {
+    width: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 15vw;
+    opacity: 1;
+  }
+}
+
+@keyframes emerge {
+  0% {
+    width: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 15vw;
+    opacity: 1;
+  }
+}
+body {
+  padding: 3%;
+  height: 100vh;
+  width: 100%;
+  color: #dcdddd;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/global/canon.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+main {
+  padding: 2%;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(1vw);
+          backdrop-filter: blur(1vw);
+  border: 0.1vw solid rgba(255, 203, 203, 0.1529411765);
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  main {
+    flex-direction: column-reverse;
+    padding: 5%;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main {
+    flex-direction: column-reverse;
+    padding: 5%;
+  }
+}
+main .left {
+  padding: 5%;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  main .left {
+    width: 100%;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .left {
+    width: 100%;
+  }
+}
+main .left h1 {
+  font-size: 4vw;
+  font-family: "Caveat", cursive;
+  text-align: center;
+  line-height: 6vw;
+  letter-spacing: 0.1vw;
+  margin-bottom: 10%;
+}
+@media (max-width: 500px) {
+  main .left h1 {
+    font-size: 10vw;
+    line-height: 15vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .left h1 {
+    font-size: 7vw;
+    line-height: 10vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .left h1 {
+    font-size: 5vw;
+    line-height: 7vw;
+  }
+}
+main .left a {
+  text-decoration: none;
+  color: #dcdddd;
+  background-color: #e24510;
+  padding: 1.5% 2.5%;
+  font-size: 1vw;
+  border: 0.15vw solid #e24510;
+  outline: none;
+  border-radius: 0.3vw;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+}
+main .left a:hover {
+  background-color: transparent;
+}
+@media (max-width: 500px) {
+  main .left a {
+    padding: 4% 8%;
+    font-size: 3vw;
+    border-radius: 3vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .left a {
+    padding: 3% 7%;
+    font-size: 2.1vw;
+    border-radius: 2vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .left a {
+    padding: 3% 7%;
+    font-size: 1.3vw;
+    border-radius: 1vw;
+  }
+}
+main .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+@media (max-width: 500px) {
+  main .right {
+    width: 100%;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .right {
+    width: 100%;
+  }
+}
+main .right div {
+  background-color: #dcdddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5% 1.5% 3.5% 1.5%;
+  position: absolute;
+}
+main .right div img {
+  width: 15vw;
+  -webkit-animation: emerge 1s ease-in;
+          animation: emerge 1s ease-in;
+}
+@media (max-width: 500px) {
+  main .right div img {
+    width: 30vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .right div img {
+    width: 20vw;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .right div img {
+    width: 18vw;
+  }
+}
+main .right .zero img {
+  width: 20vw;
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .right .zero img {
+    width: 30vw;
+  }
+}
+main .right .one {
+  transform: rotate(30deg);
+  margin-right: -50%;
+  margin-top: -10%;
+}
+main .right .two {
+  margin-top: 2vw;
+  margin-left: 10%;
+  transform: rotate(-20deg);
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .right .two img {
+    width: 25vw;
+  }
+}
+main .right .three {
+  margin-top: -50%;
+  margin-left: -10%;
+  transform: rotate(10deg);
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .right .three {
+    margin-top: -30%;
+  }
+}
+main .right .four {
+  margin-top: 10vw;
+  margin-left: -50%;
+  transform: rotate(-10deg);
+}
+main .right .five {
+  margin-top: 50%;
+  margin-left: 30%;
+  transform: rotate(40deg);
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  main .right .five {
+    margin-top: 30%;
+    transform: rotate(20deg);
+  }
+}/*# sourceMappingURL=index.css.map */
